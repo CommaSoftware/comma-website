@@ -1,0 +1,60 @@
+:root {
+	/* Colors of Comma Software theme */
+	--color-white: #FFFFFF;
+	--color-gray: #999999;
+	--color-gray-ease: #EEEEEE;
+	--color-gray-blue: #373D44;
+	--color-black: #000000;
+	--color-black-precious: #0E1011;
+	--color-black-bg: #16191C;
+	--color-violet-ease: #9747FF;
+	--color-violet: #9400FF;
+	--color-violet-darker: #8800DD;
+	--color-violet-bg-ease: #EAC9FF;
+	--color-violet-bg: #C0B6FF;
+	--color-violet-bg-darker: #520B7E;
+	--color-aquamarine: #1DE4B0;
+	--color-blue: #0183FF;
+
+	/* Font sizes */
+	--font-size-content-small: 14px;
+	--font-size-content: 16px;
+	--font-size-content-big: 18px;
+	--font-size-heading-small: 20px;
+	--font-size-heading: 24px;
+	--font-size-heading-big: 32px;
+	--font-size-heading-large: 48px;
+	--font-size-heading-very-large: 56px;
+
+	/* Modular grid */
+	--space-atomar: 4px;
+	--space-atomar-2x: calc(var(--space-atomar) * 2); /* 8px */
+	--space-atomar-3x: calc(var(--space-atomar) * 3); /* 12px */
+	--space-atomar-4x: calc(var(--space-atomar) * 4); /* 16px */
+	--space-atomar-5x: calc(var(--space-atomar) * 5); /* 20px */
+	--space-atomar-6x: calc(var(--space-atomar) * 6); /* 24px */
+	--space-atomar-9x: calc(var(--space-atomar) * 9); /* 36px */
+	--space-atomar-12x: calc(var(--space-atomar) * 12); /* 48px */
+	--space-atomar-18x: calc(var(--space-atomar) * 18); /* 64px */
+	--space-atomar-32x: calc(var(--space-atomar) * 32); /* 128px */
+
+	/* Unique properties */
+	--header-height: 69px; /* Using for indenting "body" */
+	--content-area-width: 1070px;
+	--content-area-padding: var(--space-atomar-4x);
+
+	/* Columns system */
+	--column-count: 6;
+	--space-column-gap: var(--space-atomar-4x);
+
+	--space-column-plus-gap: calc((var(--content-area-width) + var(--space-column-gap)) / var(--column-count));
+	--space-column: calc(var(--space-column-plus-gap) - var(--space-column-gap));
+	--space-column-2: calc((var(--space-column-plus-gap)) * 2 - var(--space-column-gap));
+	--space-column-3: calc((var(--space-column-plus-gap)) * 3 - var(--space-column-gap));
+	--space-column-4: calc((var(--space-column-plus-gap)) * 4 - var(--space-column-gap));
+
+	/* Animations and trasitions */
+	--transition: 200ms;
+	--transition-fast: 100ms;
+	--transition-long: 400ms;
+}
