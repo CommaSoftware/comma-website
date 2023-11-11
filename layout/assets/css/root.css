@@ -36,6 +36,7 @@
 	--space-6x: calc(var(--space) * 6); /* 24px */
 	--space-8x: calc(var(--space) * 8); /* 32px */
 	--space-9x: calc(var(--space) * 9); /* 36px */
+	--space-10x: calc(var(--space) * 10); /* 40px */
 	--space-12x: calc(var(--space) * 12); /* 48px */
 	--space-16x: calc(var(--space) * 16); /* 64px */
 	--space-32x: calc(var(--space) * 32); /* 128px */

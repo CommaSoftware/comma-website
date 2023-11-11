@@ -19,8 +19,10 @@
 	justify-content: center;
 	height: 100%;
 
+	box-sizing: content-box;
 	max-width: var(--content-area-width);
 	margin: 0 auto;
+	padding: var(--space-4x);
 }
 
 .main-banner__block h1 {

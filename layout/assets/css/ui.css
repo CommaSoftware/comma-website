@@ -7,6 +7,8 @@ body {
 	min-height: 100vh;
 }
 
+
+/* Buttons */
 .btn {
 	display: inline-flex;
 	justify-content: center;
@@ -30,7 +32,7 @@ body {
 
 .btn:not(.is-transparent-bg, .is-bordered):hover,
 .btn:not(.is-transparent-bg, .is-bordered):active {
-	box-shadow: 2px -2px 8px 0px rgba(255, 255, 255, 0.30), -2px 2px 8px 0px rgba(255, 255, 255, 0.30);
+	box-shadow: 2px -2px 8px 0px rgba(234, 201, 255, 0.30), -2px 2px 8px 0px rgba(234, 201, 255, 0.30);
 }
 
 .btn:not(.is-transparent-bg):active {
@@ -53,11 +55,11 @@ body {
 }
 
 .btn.is-transparent-bg:hover {
-	color: var(--color-violet-bg);
+	color: var(--color-violet-bg-ease);
 }
 
 .btn.is-transparent-bg:active {
-	color: var(--color-violet-bg);
+	color: var(--color-violet-bg-ease);
 	filter: brightness(88%);
 }
 
@@ -70,12 +72,37 @@ body {
 }
 
 .btn.is-bordered:hover {
-	color: var(--color-violet-bg);
-	border-color: var(--color-violet-bg);
+	color: var(--color-violet-bg-ease);
+	border-color: var(--color-violet-bg-ease);
 }
 
 .btn.is-bordered:active {
-	color: var(--color-violet-bg);
-	border-color: var(--color-violet-bg);
+	color: var(--color-violet-bg-ease);
+	border-color: var(--color-violet-bg-ease);
 	filter: brightness(88%);
+}
+
+/* Headings and Texts */
+.heading {
+	display: inline-block;
+	margin-left: var(--space-8x);
+
+	color: var(--color-black);
+	font-size: var(--font-size-heading-big);
+	font-weight: 700;
+	letter-spacing: -0.32px;
+	text-transform: uppercase;
+}
+
+.heading::before {
+	content: "/";
+	color: var(--color-violet);
+}
+
+.text {
+	color: var(--color-black);
+	font-size: var(--font-size-content-big);
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: -0.18px;
 }

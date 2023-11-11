@@ -12,8 +12,10 @@
 	grid-template-columns: 1fr 1fr;
 	gap: var(--space-8x) var(--space-4x);
 
+	box-sizing: content-box;
 	max-width: var(--content-area-width);
 	margin: 0 auto;
+	padding: var(--space-4x);
 }
 
 .main-footer__block  .btn.is-small {
