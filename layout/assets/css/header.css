@@ -1,0 +1,40 @@
+.main-header {
+	position: fixed;
+	top: var(--space-atomar-2x);
+	width: 100%;
+}
+
+.main-header__pannel {
+	display: flex;
+	gap: var(--space-atomar-3x);
+	justify-content: space-between;
+	align-items: center;
+
+	max-width: var(--content-area-width);
+	margin: 0 auto;
+	padding: var(--space-atomar-3x);
+
+	border-radius: var(--space-atomar-3x);
+	background-color: var(--color-black-85);
+}
+
+.main-header__pannel .main-header__logo img {
+	height: var(--space-atomar-9x);
+}
+
+.main-header__pannel nav {
+	margin-left: auto;
+}
+
+.main-header__pannel nav ul {
+	display: flex;
+	gap: var(--space-atomar-2x);
+	justify-content: space-between;
+	align-items: center;
+
+	list-style-type: none;
+}
+
+.main-header__pannel nav ul .btn {
+	color: var(--color-white);
+}

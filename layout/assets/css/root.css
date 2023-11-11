@@ -1,3 +1,8 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
 :root {
 	/* Colors of Comma Software theme */
 	--color-white: #FFFFFF;
@@ -5,6 +10,7 @@
 	--color-gray-ease: #EEEEEE;
 	--color-gray-blue: #373D44;
 	--color-black: #000000;
+	--color-black-85: rgb(0, 0, 0, .85); /* opacity is 85% */
 	--color-black-precious: #0E1011;
 	--color-black-bg: #16191C;
 	--color-violet-ease: #9747FF;

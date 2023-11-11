@@ -1,0 +1,47 @@
+.btn {
+	padding: var(--space-atomar-2x) var(--space-atomar-6x);
+	
+	font-size: var(--font-size-content-big);
+	letter-spacing: -0.18px;
+	font-weight: 700;
+	text-decoration: none;
+
+	border-radius: var(--space-atomar-2x);
+	color: var(--color-black);
+	background-color: var(--color-white);
+
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.btn:not(.is-transparent-bg):hover,
+.btn:not(.is-transparent-bg):active {
+	box-shadow: 2px -2px 8px 0px rgba(255, 255, 255, 0.30), -2px 2px 8px 0px rgba(255, 255, 255, 0.30);
+}
+
+.btn:active {
+	filter: brightness(88%);
+}
+
+.btn.is-small {
+	padding: var(--space-atomar) var(--space-atomar-2x);
+
+	font-size: var(--font-size-content);
+	font-weight: 400;
+	letter-spacing: -0.16px;
+
+	border-radius: var(--space-atomar);
+}
+
+.btn.is-transparent-bg {
+	color: var(--color-black);
+	background-color: transparent;
+}
+
+.btn.is-transparent-bg:hover {
+	color: var(--color-violet);
+}
+
+.btn.is-transparent-bg:active {
+	color: var(--color-violet-ease);
+}
