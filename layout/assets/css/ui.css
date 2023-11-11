@@ -1,12 +1,17 @@
 .btn {
-	padding: var(--space-atomar-2x) var(--space-atomar-6x);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: var(--space-2x);
+	padding: var(--space-2x) var(--space-6x);
 	
+	text-align: center;
 	font-size: var(--font-size-content-big);
 	letter-spacing: -0.18px;
 	font-weight: 700;
 	text-decoration: none;
 
-	border-radius: var(--space-atomar-2x);
+	border-radius: var(--space-2x);
 	color: var(--color-black);
 	background-color: var(--color-white);
 
@@ -14,34 +19,42 @@
 	transition: var(--transition);
 }
 
-.btn:not(.is-transparent-bg):hover,
-.btn:not(.is-transparent-bg):active {
+.btn:not(.is-transparent-bg, .is-bordered):hover,
+.btn:not(.is-transparent-bg, .is-bordered):active {
 	box-shadow: 2px -2px 8px 0px rgba(255, 255, 255, 0.30), -2px 2px 8px 0px rgba(255, 255, 255, 0.30);
 }
 
-.btn:active {
+.btn:not(.is-transparent-bg):active {
 	filter: brightness(88%);
 }
 
 .btn.is-small {
-	padding: var(--space-atomar) var(--space-atomar-2x);
+	padding: var(--space) var(--space-2x);
 
 	font-size: var(--font-size-content);
 	font-weight: 400;
 	letter-spacing: -0.16px;
 
-	border-radius: var(--space-atomar);
+	border-radius: var(--space);
 }
 
 .btn.is-transparent-bg {
-	color: var(--color-black);
+	color: var(--color-white);
 	background-color: transparent;
 }
 
 .btn.is-transparent-bg:hover {
-	color: var(--color-violet);
+	color: var(--color-violet-ease);
 }
 
 .btn.is-transparent-bg:active {
-	color: var(--color-violet-ease);
+	color: var(--color-violet);
+}
+
+.btn.is-bordered {
+	box-sizing: border-box;
+	padding: calc(var(--space-2x) - 1px) calc(var(--space-6x) - 1px);
+	border: 2px solid var(--color-gray);
+	background-color: transparent;
+	color: var(--color-gray);
 }

@@ -3,6 +3,10 @@
 	margin: 0;
 }
 
+body {
+	min-height: 100vh;
+}
+
 :root {
 	/* Colors of Comma Software theme */
 	--color-white: #FFFFFF;
@@ -33,25 +37,26 @@
 	--font-size-heading-very-large: 56px;
 
 	/* Modular grid */
-	--space-atomar: 4px;
-	--space-atomar-2x: calc(var(--space-atomar) * 2); /* 8px */
-	--space-atomar-3x: calc(var(--space-atomar) * 3); /* 12px */
-	--space-atomar-4x: calc(var(--space-atomar) * 4); /* 16px */
-	--space-atomar-5x: calc(var(--space-atomar) * 5); /* 20px */
-	--space-atomar-6x: calc(var(--space-atomar) * 6); /* 24px */
-	--space-atomar-9x: calc(var(--space-atomar) * 9); /* 36px */
-	--space-atomar-12x: calc(var(--space-atomar) * 12); /* 48px */
-	--space-atomar-18x: calc(var(--space-atomar) * 18); /* 64px */
-	--space-atomar-32x: calc(var(--space-atomar) * 32); /* 128px */
+	--space: 4px;
+	--space-2x: calc(var(--space) * 2); /* 8px */
+	--space-3x: calc(var(--space) * 3); /* 12px */
+	--space-4x: calc(var(--space) * 4); /* 16px */
+	--space-5x: calc(var(--space) * 5); /* 20px */
+	--space-6x: calc(var(--space) * 6); /* 24px */
+	--space-8x: calc(var(--space) * 8); /* 32px */
+	--space-9x: calc(var(--space) * 9); /* 36px */
+	--space-12x: calc(var(--space) * 12); /* 48px */
+	--space-16x: calc(var(--space) * 16); /* 64px */
+	--space-32x: calc(var(--space) * 32); /* 128px */
 
 	/* Unique properties */
 	--header-height: 69px; /* Using for indenting "body" */
 	--content-area-width: 1070px;
-	--content-area-padding: var(--space-atomar-4x);
+	--content-area-padding: var(--space-4x);
 
 	/* Columns system */
 	--column-count: 6;
-	--space-column-gap: var(--space-atomar-4x);
+	--space-column-gap: var(--space-4x);
 
 	--space-column-plus-gap: calc((var(--content-area-width) + var(--space-column-gap)) / var(--column-count));
 	--space-column: calc(var(--space-column-plus-gap) - var(--space-column-gap));
