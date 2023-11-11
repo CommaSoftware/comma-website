@@ -1,6 +1,7 @@
 .main-header {
 	position: fixed;
 	top: var(--space-2x);
+	z-index: 10;
 
 	box-sizing: border-box;
 	width: 100%;

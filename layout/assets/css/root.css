@@ -1,12 +1,3 @@
-* {
-	padding: 0;
-	margin: 0;
-}
-
-body {
-	min-height: 100vh;
-}
-
 :root {
 	/* Colors of Comma Software theme */
 	--color-white: #FFFFFF;
