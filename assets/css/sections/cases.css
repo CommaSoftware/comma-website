@@ -46,6 +46,11 @@
 	text-decoration: none;
 
 	cursor: pointer;
+	transition: var(--transition);
+}
+
+.cases__btn-to-web div:hover {
+	color: var(--color-violet-bg-ease);
 }
 
 .cases__btn-to-web div .favicon {
@@ -94,12 +99,11 @@
 /* Cases banner */
 .cases-banner__block {
 	display: flex;
+	transition: var(--transition-fast) ease-in;
 }
 
-.cases-banner .cases__link {
-	position: absolute;
-	z-index: -10;
-	opacity: 0;
+.cases-banner__block:hover {
+	transform: scale(100.8%);
 }
 
 .cases-banner__block .cases__link::after  {
@@ -233,6 +237,12 @@
 
 	border-radius: var(--space);
 	border: 1px solid var(--color-violet-bg-ease);
+	
+	transition: var(--transition-fast) ease-in;
+}
+
+.cases-list__item:hover .cases-list__item__image {
+	transform: scale(102%);
 }
 
 .cases-list__item__image-block .cases__btn-to-web {

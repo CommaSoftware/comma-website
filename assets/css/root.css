@@ -58,6 +58,6 @@
 
 	/* Animations and trasitions */
 	--transition: 200ms;
-	--transition-fast: 100ms;
+	--transition-fast: 150ms;
 	--transition-long: 400ms;
 }
