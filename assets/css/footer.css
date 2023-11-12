@@ -124,7 +124,7 @@
 }
 
 .main-footer__socials ul a:hover path {
-	fill: var(--color-white);
+	fill: var(--color-violet-bg-ease);
 }
 
 /* .main-footer__socials ul a.is-vk-icon:hover path {

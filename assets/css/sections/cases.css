@@ -85,14 +85,16 @@
 	color: var(--color-violet);
 	font-size: var(--font-size-content-small);
 	font-weight: 400;
-	line-height: -0.14px;
+	letter-spacing: -0.14px;
 	text-decoration: none;
 
 	cursor: pointer;
+	transition: var(--transition);
 }
 
-.cases__category-list li:hover {
-	text-decoration: underline;
+.cases__category-list li:hover,
+.cases__category-list li:active {
+	color: var(--color-violet-ease);
 }
 
 
