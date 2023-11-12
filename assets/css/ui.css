@@ -7,6 +7,18 @@ body {
 	min-height: 100vh;
 }
 
+.svg {
+	position: absolute;
+	z-index: -10;
+	opacity: 0;
+}
+
+.content-area-wrapper {
+	box-sizing: content-box;
+	max-width: var(--content-area-width);
+	margin: 0 auto;
+	padding: 0 var(--space-4x);
+}
 
 /* Buttons */
 .btn {
