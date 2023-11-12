@@ -40,6 +40,7 @@
 	--space-12x: calc(var(--space) * 12); /* 48px */
 	--space-16x: calc(var(--space) * 16); /* 64px */
 	--space-32x: calc(var(--space) * 32); /* 128px */
+	--space-64x: calc(var(--space) * 64); /* 256px */
 
 	/* Unique properties */
 	--header-height: 69px; /* Using for indenting "body" */
