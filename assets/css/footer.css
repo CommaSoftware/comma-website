@@ -28,7 +28,7 @@
 }
 
 .main-footer__about__logo {
-	display: block;
+	display: inline-block;
 	margin-bottom: var(--space-4x);
 }
 
@@ -89,14 +89,17 @@
 
 
 /* Block of Copyright */
-.main-footer__copygight {
+.main-footer__copyright {
 	display: flex;
 	align-items: center;
 	gap: var(--space-4x);
+
+	font-size: var(--font-size-content-small);
+	letter-spacing: -0.14px;
 }
 
-.main-footer__copygight span,
-.main-footer__copygight .btn {
+.main-footer__copyright span,
+.main-footer__copyright .btn {
 	color: var(--color-gray);
 }
 

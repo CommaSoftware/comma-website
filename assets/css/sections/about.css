@@ -1,0 +1,39 @@
+.about {
+	margin-top: var(--space-32x);
+	margin-bottom: var(--space-16x);
+}
+
+.about__logo {
+	padding-bottom: var(--space-16x);
+}
+
+.about__logo img {
+	display: block;
+	max-width: var(--space-column-2);
+	margin: 0 auto;
+}
+
+.about__content__text-block {
+	margin: var(--space-16x) 0;
+
+	columns: 3;
+	column-gap: var(--space-4x);
+}
+
+.about__content__image-n-quote-block {
+	display: grid;
+	grid-template-columns: var(--space-column-4) var(--space-column-2);
+	gap: var(--space-column-gap);
+}
+
+.about__content__image {
+	width: 100%;
+	aspect-ratio: 16/8.4;
+}
+
+.about__content__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	clip-path: url(#rectangleAboutCover);
+}
