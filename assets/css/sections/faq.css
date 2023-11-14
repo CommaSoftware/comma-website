@@ -1,0 +1,74 @@
+.faq {
+	margin-top: var(--space-32x);
+	margin-bottom: var(--space-16x);
+}
+
+.faq .text {
+	margin-left: var(--space-8x);
+	margin-top: var(--space-3x);
+}
+
+.faq__block {
+	margin-top: var(--space-8x);
+}
+
+.faq__item__question {
+	display: flex;
+	align-items: center;
+	gap: var(--space-8x);
+	padding: var(--space-4x) var(--space-8x);
+
+	border-top: 1px solid var(--color-gray);
+	color: var(--color-black);
+	font-size: var(--font-size-heading);
+	font-weight: 700;
+	letter-spacing: -0.24px;
+
+	cursor: pointer;
+}
+
+.faq__item__question::marker {
+	content: "";
+}
+
+.faq__item__question::before {
+	content: url("data:image/svg+xml, <svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M12 3C12.4142 3 12.75 3.33579 12.75 3.75V11.25H20.25C20.6642 11.25 21 11.5858 21 12C21 12.4142 20.6642 12.75 20.25 12.75H12.75V20.25C12.75 20.6642 12.4142 21 12 21C11.5858 21 11.25 20.6642 11.25 20.25V12.75H3.75C3.33579 12.75 3 12.4142 3 12C3 11.5858 3.33579 11.25 3.75 11.25H11.25V3.75C11.25 3.33579 11.5858 3 12 3Z' fill='%23000000'/></svg>");
+	width: var(--space-6x);
+	height: var(--space-6x);
+}
+
+.faq__item[open] .faq__item__question::before {
+	content: url("data:image/svg+xml, <svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M3 12C3 11.5858 3.33579 11.25 3.75 11.25H20.25C20.6642 11.25 21 11.5858 21 12C21 12.4142 20.6642 12.75 20.25 12.75H3.75C3.33579 12.75 3 12.4142 3 12Z' fill='%23000000'/></svg>");
+}
+
+.faq__item__answer {
+	display: inline-block;
+	padding: var(--space-3x);
+	margin-bottom: var(--space-4x);
+	margin-left: calc(var(--space-16x) + var(--space-6x));
+
+	border-radius: var(--space-2x);
+	background-color: var(--color-gray-ease);
+
+	color: var(--color-black);
+	font-size: var(--font-size-content-big);
+	font-weight: 400;
+	letter-spacing: -0.18px;
+
+	transition: var(--transition) ease-in 150ms;
+}
+
+@keyframes open {
+	0% {opacity: 0; transform:translateX(-32px)}
+	100% {opacity: 1; transform:translateX(0)}
+}
+
+.faq__item[open] .faq__item__answer {
+	animation: open .5s ease-in-out;
+}
+
+.faq__item__answer:empty::after {
+	content: "/// Ответа пока нет, но мы уже работаем над ним";
+	color: var(--color-gray);
+	font-style: italic;
+}
