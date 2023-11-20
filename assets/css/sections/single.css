@@ -116,7 +116,7 @@
 	padding: var(--space-4x);
 
 	border-radius: var(--space-2x);
-	border: 1px solid var(--color-gray);
+	border: 1px solid var(--color-gray-blue);
 }
 
 .is-service-heading .article__headings-block__heading {
