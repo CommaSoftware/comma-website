@@ -3,11 +3,17 @@
 	transform: translateZ(-1px);
 }
 
+.cases .heading {
+	color: var(--color-white);
+	padding-top: var(--space-16x);
+	margin-bottom: var(--space-16x);
+}
+
 .cases-banner {
 	position: relative;
 	transform: translateZ(-1px);
 
-	padding-top: var(--space-16x);
+	padding-bottom: var(--space-16x);
 }
 
 .cases-banner::after {
@@ -17,11 +23,6 @@
 	z-index: -2;
 	background: linear-gradient(180deg, rgba(22, 25, 28, 0.80) 0%, #16191C 100%);
 	backdrop-filter: blur(64px);
-}
-
-.cases-banner .heading {
-	color: var(--color-white);
-	margin-bottom: var(--space-16x);
 }
 
 
@@ -187,7 +188,6 @@
 
 /* Other cases */
 .cases-list {
-	padding-top: var(--space-16x);
 	padding-bottom: var(--space-16x);
 }
 

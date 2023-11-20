@@ -104,3 +104,41 @@
 .article__block.comma-wp-content {
 	margin-bottom: var(--space-32x);
 }
+
+
+/* Service heading */
+.is-service-heading {
+	padding-bottom: var(--space-16x);
+	margin-bottom: var(--space-16x);
+}
+
+.is-service-heading .article__block {
+	padding: var(--space-4x);
+
+	border-radius: var(--space-2x);
+	border: 1px solid var(--color-gray);
+}
+
+.is-service-heading .article__headings-block__heading {
+	font-size: 32px;
+	font-weight: 900;
+	line-height: 32px; /* 100% */
+	letter-spacing: -0.01em;
+}
+
+.is-service-heading__price-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--space-2x);
+
+	margin-top: var(--space-6x);
+	margin-right: var(--space-3x);
+}
+
+.is-service-heading__price {
+	color: var(--color-gray);
+	font-size: var(--font-size-content-small);
+	font-weight: 400;
+	letter-spacing: -0.01em
+}
