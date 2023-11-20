@@ -97,6 +97,30 @@ body {
 	border-radius: var(--space);
 }
 
+.btn.is-only-icon {
+	position: relative;
+	display: flex;
+
+	width: var(--space-9x);
+	height: var(--space-9x);
+	padding: 0;
+
+	border-radius: var(--space);
+
+	font-size: var(--font-size-content-small);
+	font-weight: 400;
+	letter-spacing: -0.01em;
+}
+
+.btn.is-only-icon > * {
+	margin: auto;
+	width: 10px;
+
+	font-size: var(--font-size-content-small);
+	font-weight: 400;
+	letter-spacing: -0.01em;
+}
+
 .btn.is-transparent-bg {
 	color: var(--color-white);
 	background-color: transparent;
@@ -189,4 +213,24 @@ body {
 	font-size: var(--font-size-content);
 	font-weight: 400;
 	letter-spacing: -0.16px;
+}
+
+
+/* Pagination */
+.pagination {
+	display: flex;
+	align-items: center;
+	gap: var(--space-2x);
+}
+
+.pagination .btn.is-current {
+	color: var(--color-white);
+	background: var(--color-violet);
+	cursor: default;
+}
+
+.pagination .btn.is-current:hover,
+.pagination .btn.is-current:active {
+	box-shadow: none;
+	filter: none;
 }
