@@ -304,6 +304,6 @@
 	align-items: start;
 }
 
-.pagination {
+.cases.is-cases-page .pagination {
 	padding: var(--space-2x) 0 0 var(--space-8x);
 }
