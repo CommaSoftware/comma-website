@@ -105,7 +105,10 @@ function openImageOverlay(images) {
 	document.querySelector(".overlay-block #imgSlideRight").addEventListener("click", () => { slideGallery(1); });
 }
 
-openImageOverlay(document.querySelectorAll(".main-header__logo img"));
+const clickImg = document.querySelectorAll(".comma-wp-content img");
+for(let i=0; i<clickImg.length; i++) {
+	clickImg[i].addEventListener("click", () => { openImageOverlay(clickImg); })
+}
 // ---------- Image overlay (end) ---------- //
 
 
