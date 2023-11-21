@@ -4,7 +4,7 @@
 	height: 100vh;
 	padding: var(--space-32x) 0;
 
-	background-color: var(--color-black-bg);
+	background-color: #151A1E;
 }
 
 .page-404 .content-area-wrapper {
