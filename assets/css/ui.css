@@ -7,6 +7,11 @@ body {
 	min-height: 100vh;
 }
 
+a[name] {
+	position: relative;
+	top: calc(0px - var(--header-height) - var(--space-10x));
+}
+
 .svg {
 	position: absolute;
 	z-index: -10;
