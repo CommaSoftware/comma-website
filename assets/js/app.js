@@ -118,3 +118,60 @@ function closeCurrentOverlay() {
 	document.body.style.overflow = "auto";
 }
 // ---------- Close overlay (end) ---------- //
+
+
+// ---------- Text digital animation (start) ---------- //
+var textAnimation = {
+	eventObjs: [],
+
+	randSymb(n){  // [ 3 ] random words and digits by the wocabulary
+		var s ='', abd ='abcdefghijklmnopqrstuvwxyz', aL = abd.length;
+		while(s.length < n)
+			s += abd[Math.random() * aL|0];
+		return s;
+	},
+
+	addEventObjs(array) {
+		for(let i=0; i<array.length; i++) {
+
+			array[i].isAnimateAble = true;
+			textAnimation.eventObjs.push(array[i]);
+
+			array[i].addEventListener("mouseover", () => {
+				if(array[i].isAnimateAble) textAnimation.do(array[i]);
+			})
+		}
+	},
+	
+	do(objWithText) {
+		objWithText.isAnimateAble = false;
+		let textObj;
+
+		if(objWithText.querySelector(".text-animation")) textObj = objWithText.querySelector(".text-animation");
+		else textObj = objWithText;
+		
+		const origText = textObj.innerText;
+		textObj.setAttribute("style",`width:${textObj.offsetWidth}px; height:${textObj.offsetHeight}px; text-overflow: "";`);
+	
+		let i = 0;
+		let delay = 800;
+		let delaySymb = delay/origText.length;
+	
+		let intervalID = setInterval(()=>{
+			let innerIntervalID = setInterval(()=>{
+				textObj.innerText = origText.slice(0, i) + textAnimation.randSymb(origText.length - i).toLocaleUpperCase();
+				setTimeout(()=>{clearInterval(innerIntervalID)}, delaySymb)
+			}, 25)
+			if(i == origText.length) {
+				clearInterval(intervalID);
+				textObj.setAttribute("style","");
+				setTimeout(()=>{ objWithText.isAnimateAble = true; }, 50)
+			}
+			i++;
+		}, delaySymb);
+	}
+}
+
+textAnimation.addEventObjs(document.querySelectorAll(".btn, .text-animation-block"));
+
+// ---------- Text digital animation (end) ---------- //

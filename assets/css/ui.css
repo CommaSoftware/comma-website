@@ -61,15 +61,24 @@ a[name] {
 	transition: 56ms;
 } */
 
-/* Buttons */
+
+/* ---------- Animations ---------- */
+.text-animation-block {
+	overflow: hidden;
+}
+
+
+/* ---------- Buttons ---------- */
 .btn {
 	display: inline-flex;
-	justify-content: center;
 	align-items: center;
 	gap: var(--space-2x);
+
+	box-sizing: border-box;
 	padding: var(--space-2x) var(--space-6x);
 	
 	text-align: center;
+	white-space: nowrap;
 	font-size: var(--font-size-content-big);
 	letter-spacing: -0.18px;
 	font-weight: 700;
@@ -81,6 +90,7 @@ a[name] {
 
 	cursor: pointer;
 	transition: var(--transition);
+	overflow: hidden;
 }
 
 .btn:not(.is-transparent-bg, .is-bordered):hover,
@@ -159,7 +169,7 @@ a[name] {
 	filter: brightness(88%);
 }
 
-/* Headings and Texts */
+/* ---------- Headings and Texts ---------- */
 .heading {
 	display: inline-block;
 	margin-left: var(--space-8x);
