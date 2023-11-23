@@ -173,5 +173,35 @@ var textAnimation = {
 }
 
 textAnimation.addEventObjs(document.querySelectorAll(".btn, .text-animation-block"));
-
 // ---------- Text digital animation (end) ---------- //
+
+// ---------- Mousemove 3D-card animation (start) ---------- //
+const mousemoveCards = document.querySelectorAll(".mousemove-card-animation");
+for (let i = 0; i < mousemoveCards.length; i++) {
+	mousemoveCards[i].addEventListener("mousemove", (e)=>{
+		let rect = e.currentTarget.getBoundingClientRect();
+
+		let centerCardX = (rect.left + window.pageXOffset + e.currentTarget.offsetWidth/2);
+		let centerCardY = (rect.top + window.pageYOffset + e.currentTarget.offsetHeight/2);
+		
+		let deviationX = (centerCardX - e.pageX);
+		let deviationY = (centerCardY - e.pageY);
+
+		let rotateY = (centerCardX - e.pageX) * -0.075;
+		let rotateX = (centerCardY - e.pageY) * 0.05;
+
+		Object.assign(e.currentTarget, {
+			style: `
+			--deviationX-card: ${deviationX}px;
+			--deviationY-card: ${deviationY}px;
+			
+			--rotateX-card: ${rotateX}deg;
+			--rotateY-card: ${rotateY}deg;
+			`
+		})
+
+		// e.currentTarget.style.transform = `translate(-0.05%, -0.1%) scale(105%) rotateX(${devationY}deg) rotateY(${devationX}deg)`;
+	});
+	
+}
+// ---------- Mousemove 3D-card animation (end) ---------- //

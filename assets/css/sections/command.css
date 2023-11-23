@@ -10,6 +10,12 @@
 	margin-top: var(--space-8x);
 }
 
+.command__card-3D-container {
+	transform-style: flat;
+	perspective: 500px;
+	perspective-origin: center center;
+}
+
 .command__card {
 	position: relative;
 	display: block;
@@ -17,10 +23,28 @@
 	aspect-ratio: 9/12;
 
 	clip-path: url("#rectangleCommandCard");
-	background: linear-gradient(-40deg, #EEEEEE 0%, #FFFFFF 100%);
 	text-decoration: none;
 
-	transition: var(--transition-long) cubic-bezier(.18,.89,.32,1.28) 50ms;
+	will-change: transform;
+
+	transition: var(--transition-long) ease-in-out;
+	overflow: hidden;
+}
+
+.command__card:not(.is-vacancy)::before {
+	content: "";
+	position: absolute;
+	display: block;
+	top: -100%;
+	left: 0;
+	transform: translateY(calc(var(--deviationY-card)*1.50));
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	mix-blend-mode: plus-lighter;
+	background: linear-gradient(180deg, #520B7E15 0%, #9747FF75 50%, #520B7E00 100%);
+	opacity: 0;
+	transition: var(--transition-fast) ease-out;
 }
 
 .command__card::after {
@@ -32,11 +56,10 @@
 	z-index: -1;
 	width: 100%;
 	height: 100%;
-	clip-path: url("#rectangleCommandCard");
 
 	background: var(--color-black-precious);
 	opacity: 0;
-	transition: var(--transition-long) cubic-bezier(.18,.89,.32,1.28) 50ms;
+	transition: var(--transition) ease-in-out;
 }
 
 .command__card__descr-block {
@@ -50,7 +73,7 @@
 	font-size: 28px;
 	font-weight: 900;
 	letter-spacing: -0.28px;
-	transition: var(--transition-long) cubic-bezier(.18,.89,.32,1.28) 50ms;
+	transition: var(--transition) ease-in-out;
 }
 
 .command__card__career {
@@ -85,7 +108,7 @@
 	text-transform: lowercase;
 
 	opacity: 0;
-	transition: var(--transition-long) cubic-bezier(.18,.89,.32,1.28) 50ms;
+	transition: var(--transition) ease-in-out;
 }
 
 .command__card__contact {
@@ -104,7 +127,7 @@
 	letter-spacing: 0.28px;
 	text-transform: lowercase;
 	opacity: 0;
-	transition: var(--transition-long) cubic-bezier(.18,.89,.32,1.28) 50ms;
+	transition: var(--transition) ease-in-out;
 }
 
 .command__card__contact::before {
@@ -126,21 +149,26 @@
 .command__card__img-block img {
 	height: 100%;
 	filter: brightness(0) opacity(.1);
-	transition: var(--transition-long) cubic-bezier(.18,.89,.32,1.28) 100ms;
+	transition: var(--transition) cubic-bezier(.18,.89,.32,1.28) 100ms;
 }
 
 /* Hover effects */
 .command__card:not(.command__card.is-vacancy):hover {
-	transform: translate(-0.05%, -0.1%) scale(105%);
+	position: absolute;
+	z-index: 3;
+	transform: scale(105%) translateZ(1px) translate(calc(var(--deviationX-card)*-0.2), calc(var(--deviationY-card)*-0.2)) rotateX(var(--rotateX-card)) rotateY(var(--rotateY-card));
+	transition: var(--transition-fast) ease-out;
 }
 
-.command__card:not(.command__card.is-vacancy):active {
-	transform: scale(103.75%);
+.command__card:not(.is-vacancy):hover::before,
+.command__card:not(.is-vacancy):active::before {
+	opacity: 1;
 }
 
 .command__card:hover::after,
 .command__card:active::after {
 	opacity: 1;
+	transition: var(--transition-fast) ease-out;
 }
 
 .command__card:hover .command__card__img-block img,
@@ -165,6 +193,8 @@
 
 /* For vacancy */
 .command__card.is-vacancy {
+	position: relative;
+	z-index: -1;
 	clip-path: none;
 	background: none;
 }
