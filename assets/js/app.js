@@ -205,3 +205,46 @@ for (let i = 0; i < mousemoveCards.length; i++) {
 	
 }
 // ---------- Mousemove 3D-card animation (end) ---------- //
+
+
+//--------------- Получение cookie по name (start) ---------------//
+function getCookie ( cookieName ) {
+	var results = document.cookie.match ( '(^|;) ?' + cookieName + '=([^;]*)(;|$)' );
+	if ( results )
+		return ( unescape ( results[2] ) );
+	else
+   	return null;
+}
+//--------------- Получение cookie по name (end) ---------------//
+
+
+//--------------- Cookie-confirm Overlay (start) ---------------//
+function showCookieOverlay() {
+	if(!Number(getCookie("agreeToCookie"))) {
+		const cookieOverlay = document.createElement('div');
+		cookieOverlay.classList.add("cookie-overlay_fixed-wrapper");
+		cookieOverlay.innerHTML = `
+			<div class="cookie-overlay">
+				<div class="cookie-overlay__block">
+					<div class="cookie-overlay__description">
+						<p class="cookie-overlay__text">Мы используем файлы cookie, <br>чтобы делать наш сайт лучше ;)</p>
+						<div class="btn cookie-overlay__btn is-bordered is-small">Хорошо</div>
+					</div>
+					<img src="assets/images/icons/cookie.svg">
+				</div>
+			</div>`
+		document.body.append(cookieOverlay);
+		document.querySelector(".cookie-overlay__btn").addEventListener("click", closeCookieOverlay);
+	}
+}
+
+function closeCookieOverlay() {
+	let cookie_date = new Date();
+	cookie_date.setYear(cookie_date.getFullYear() + 1);
+	document.cookie = "agreeToCookie=1;expires=" + cookie_date.toUTCString();
+
+	document.querySelector(".cookie-overlay_fixed-wrapper").remove();
+}
+
+setTimeout(showCookieOverlay, 1000);
+//--------------- Cookie-confirm Overlay (end) ---------------//

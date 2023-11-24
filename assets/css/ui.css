@@ -161,6 +161,11 @@ a[name] {
 	color: var(--color-gray);
 }
 
+.btn.is-small.is-bordered {
+	padding: 5px 11px;
+	border-radius: 6px;
+}
+
 .btn.is-bordered:hover {
 	color: var(--color-violet-bg-ease);
 	border-color: var(--color-violet-bg-ease);

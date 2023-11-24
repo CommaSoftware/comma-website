@@ -31,7 +31,7 @@
 	width: var(--space-8x);
 }
 
-/* Img overlay */
+/* ---------- Img overlay ---------- */
 #overlay.is-img-overlay img {
 	position: absolute;
 	left: 50%;
@@ -88,7 +88,7 @@
 	background-color: #870000;
 }
 
-/* Iframe overlay */
+/* ---------- Iframe overlay ---------- */
 .is-iframe-overlay {
 	display: flex;
 	overflow: hidden;
@@ -125,4 +125,59 @@
 	border: none;
 	width: 100%;
 	height: 100%;
+}
+
+/* ---------- Cookie overlay ---------- */
+.cookie-overlay_fixed-wrapper {
+	position: fixed;
+	bottom: var(--space-2x);
+	z-index: 10;
+
+	width: 100%;
+}
+
+.cookie-overlay {
+	display: flex;
+	max-width: calc(var(--space-6x) + var(--content-area-width));
+	margin: 0 auto;
+	padding: 0;
+}
+
+.cookie-overlay__block {
+	position: relative;
+	display: flex;
+	gap: var(--space-7x);
+
+	min-height: 76px;
+	margin-left: auto;
+	padding: 0 var(--space-3x);
+
+	border-radius: 12px;
+	background: linear-gradient(99deg, #000 43.2%, #520B7E 100%);
+
+	animation: cookieIn var(--transition-long) ease-in-out;
+}
+
+.cookie-overlay__description {
+	padding: var(--space-3x) 0;
+}
+
+.cookie-overlay__text {
+	margin-bottom: var(--space-4x);
+
+	color: var(--color-white);
+	font-size: var(--font-size-content-small);
+	font-weight: 400;
+	letter-spacing: -0.01em;
+}
+
+.cookie-overlay img {
+	height: 112px;
+	aspect-ratio: 1/1;
+	transform: translateY(-12px);
+}
+
+@keyframes cookieIn {
+	from	{opacity: 0; transform: translateX(var(--space-32x));}
+	to {opacity: 1; transform: translateX(0)}
 }
