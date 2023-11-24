@@ -67,6 +67,9 @@ a[name] {
 	overflow: hidden;
 }
 
+.can-open {
+	cursor: zoom-in;
+}
 
 /* ---------- Buttons ---------- */
 .btn {

@@ -105,7 +105,7 @@ function openImageOverlay(images) {
 	document.querySelector(".overlay-block #imgSlideRight").addEventListener("click", () => { slideGallery(1); });
 }
 
-const clickImg = document.querySelectorAll(".comma-wp-content img");
+const clickImg = document.querySelectorAll(".can-open, .comma-wp-content img");
 for(let i=0; i<clickImg.length; i++) {
 	clickImg[i].addEventListener("click", () => { openImageOverlay(clickImg); })
 }
