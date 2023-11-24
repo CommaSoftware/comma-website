@@ -224,3 +224,38 @@
 	font-weight: 300;
 	letter-spacing: -0.14px;
 }
+
+
+/* ---------- Adaptation ---------- */
+@media only screen and (max-width: 1100px) {
+	.services-category {
+		display: block;
+	}
+
+	.services-category__heading {
+		display: flex;
+		margin-bottom: var(--space-12x);
+	}
+
+	.services-category__cards-block {
+		margin-left: var(--space-4x);
+	}
+
+	.services__block .text {
+		margin-left: 0;
+	}
+}
+
+@media only screen and (max-width: 760px) {
+	.service-card {
+		width: 100%;
+		height: 120px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.service-card__heading h4 {
+		height: 3.6em;
+	}
+}
