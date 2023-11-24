@@ -35,6 +35,11 @@
 // ---------- Custom Mouse (end) ---------- //
 
 
+document.querySelector(".main-header__nav__btn").addEventListener("click", (e)=> {
+	e.currentTarget.closest(".main-header__nav").classList.toggle("shown");
+});
+
+
 // ---------- Iframe overlay (start) ---------- //
 // DO NOT USE THIS for services with authorization !!!
 function openIframeOverlay(link, name = '') {

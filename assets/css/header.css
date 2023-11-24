@@ -1,7 +1,7 @@
 .main-header {
 	position: fixed;
 	top: var(--space-2x);
-	z-index: 10;
+	z-index: 12;
 
 	box-sizing: border-box;
 	width: 100%;
@@ -39,7 +39,91 @@
 }
 
 .main-header__pannel nav {
+	display: flex;
+	gap: var(--space-2x);
+	justify-content: space-between;
+	align-items: center;
+
 	margin-left: auto;
+}
+
+.main-header__nav__container {
+	display: contents;
+	transition: 600ms cubic-bezier(.08,.82,.17,1);
+}
+
+.main-header__nav__btn {
+	position: relative;
+
+	width: var(--space-9x);
+	height: var(--space-9x);
+
+	cursor: pointer;
+
+	display: none;
+}
+
+.main-header__nav__container img {
+	position: relative;
+	z-index: 1;
+
+	display: block;
+	width: 100%;
+	aspect-ratio: 16/9.5;
+	margin: 0 auto;
+
+	object-fit: cover;
+	border-radius: var(--space);
+
+	display: none;
+}
+
+.main-header__nav__container h3 {
+	margin-bottom: var(--space);
+
+	text-align: center;
+	color: var(--color-white);
+	font-size: var(--font-size-content-big);
+	font-weight: 500;
+	letter-spacing: 0.01em;
+
+	display: none;
+}
+
+.main-header__nav__container__hello {
+	padding: var(--space-3x);
+}
+
+.main-header__nav__container p {
+	text-align: center;
+	color: var(--color-gray);
+	font-size: var(--font-size-content-small);
+	font-weight: 500;
+	letter-spacing: 0.01em;
+
+	display: none;
+}
+
+.main-header__nav__container p a {
+	color: var(--color-gray-ease);
+	transition: var(--transition);
+}
+
+.main-header__nav__container p a:hover {
+	text-decoration: none;
+}
+
+.main-header__nav__btn::after {
+	content: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 17' style='enable-background:new 0 0 16 17;' xml:space='preserve'><path fill='%23FFFFFF' d='M6,11.5C6,11.2,6.2,11,6.5,11h7c0.3,0,0.5,0.2,0.5,0.5S13.8,12,13.5,12h-7C6.2,12,6,11.8,6,11.5z M2,8.5C2,8.2,2.2,8,2.5,8h11C13.8,8,14,8.2,14,8.5S13.8,9,13.5,9h-11C2.2,9,2,8.8,2,8.5z M2,5.5C2,5.2,2.2,5,2.5,5h11C13.8,5,14,5.2,14,5.5S13.8,6,13.5,6h-11C2.2,6,2,5.8,2,5.5z'/></svg>");
+	width: 28px;
+	height: 28px;
+	margin: auto;
+}
+
+.main-header__nav.shown .main-header__nav__btn::after {
+	content: url("data:image/svg+xml, <svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path d='M9.29289 9.29289C9.68342 8.90237 10.3166 8.90237 10.7071 9.29289L16 14.5858L21.2929 9.29289C21.6834 8.90237 22.3166 8.90237 22.7071 9.29289C23.0976 9.68342 23.0976 10.3166 22.7071 10.7071L17.4142 16L22.7071 21.2929C23.0976 21.6834 23.0976 22.3166 22.7071 22.7071C22.3166 23.0976 21.6834 23.0976 21.2929 22.7071L16 17.4142L10.7071 22.7071C10.3166 23.0976 9.68342 23.0976 9.29289 22.7071C8.90237 22.3166 8.90237 21.6834 9.29289 21.2929L14.5858 16L9.29289 10.7071C8.90237 10.3166 8.90237 9.68342 9.29289 9.29289Z' fill='white'/></svg>");
+	width: 32px;
+	height: 32px;
 }
 
 .main-header__pannel nav ul {
@@ -53,4 +137,68 @@
 
 .main-header__pannel nav ul .btn {
 	color: var(--color-white);
+}
+
+
+/* ---------- Adaptation ---------- */
+@media only screen and (max-width: 800px) {
+	.main-header__nav__btn {
+		display: flex;
+	}
+
+	.main-header__nav:not(.shown) .main-header__nav__container {
+		transform: translateY(-100vh);
+		opacity: .5;
+	}
+
+	.main-header__nav__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		gap: var(--space-4x);
+
+		position: fixed;
+		top: calc(var(--header-height) + var(--space));
+		left: 0;
+		right: 0;
+
+		height: calc(100vh - var(--header-height) - var(--space-10x));
+		padding: var(--space-3x);
+
+		border-radius: var(--space-3x);
+		background-color: var(--color-black);
+	}
+
+	.main-header__nav__container__hello {
+		margin-bottom: auto;
+	}
+
+	.main-header__pannel nav ul {
+		justify-content: center;
+	}
+
+	.main-header__nav__container > .btn {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.main-header__nav__container img,
+	.main-header__nav__container h3,
+	.main-header__nav__container p {
+		display: block;
+	}
+
+	@supports (backdrop-filter: blur()) {
+		.main-header__nav__container {
+			backdrop-filter: blur(12px);
+			background-color: var(--color-black-85);
+		}
+	}
+}
+
+@media only screen and (max-height: 650px) {
+	.main-header__nav__container img {
+		display: none;
+	}
 }
