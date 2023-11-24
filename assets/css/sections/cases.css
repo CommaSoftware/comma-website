@@ -9,23 +9,6 @@
 	margin-bottom: var(--space-16x);
 }
 
-.cases-banner {
-	position: relative;
-	transform: translateZ(-1px);
-
-	padding-bottom: var(--space-16x);
-}
-
-.cases-banner::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	z-index: -2;
-	background: linear-gradient(180deg, rgba(22, 25, 28, 0.80) 0%, #16191C 100%);
-	backdrop-filter: blur(64px);
-}
-
-
 /* Universal cases styles */
 .cases__link {
 	text-decoration: none;
@@ -99,93 +82,6 @@
 }
 
 
-/* Cases banner */
-.cases-banner__block {
-	display: flex;
-	transition: var(--transition) ease-out 50ms;
-}
-
-.cases-banner__block:hover {
-	transform: scale(101%);
-}
-
-.cases-banner__block:active {
-	transform: scale(100.5%);
-	transition: var(--transition-fast) ease-out;
-}
-
-.cases-banner__block .cases__link::after  {
-	max-width: var(--content-area-width);
-	height: calc(var(--space-column-4)/16*9);
-	margin: var(--space-16x) auto;
-	opacity: 0;
-}
-
-.cases-banner__img-block {
-	position: relative;
-	display: block;
-	width: var(--space-column-4);
-	aspect-ratio: 16/9;
-	overflow: hidden;
-
-	border-radius: var(--space) 0 0 var(--space);
-}
-
-.cases-banner__img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.cases-banner__img-block .cases__btn-to-web div {
-	position: absolute;
-	left: var(--space-8x);
-	bottom: var(--space-4x);
-	z-index: 2;
-
-	padding: var(--space) var(--space-2x);
-	border-radius: var(--space);
-	background-color: var(--color-black);
-}
-
-.cases-banner__headings-block {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-
-	box-sizing: border-box;
-	width: calc(var(--space-column-2) + var(--space-column-gap));
-	padding: var(--space-4x);
-}
-
-.cases-banner__headings-block::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	z-index: -1;
-
-	height: 100%;
-	width: calc(100% + var(--space-4x));
-	
-	clip-path: url("#rectangleCasesBanner");
-	background-color: var(--color-white);
-}
-
-.cases-banner__block .cases__heading {
-	color: var(--color-black);
-}
-
-.cases-banner__block .cases__descr {
-	margin-top: var(--space-3x);
-	color: var(--color-black);
-}
-
-.cases-banner__block .cases__category-list li {
-	color: var(--color-gray);
-}
-
-
 /* Other cases */
 .cases-list {
 	padding-bottom: var(--space-16x);
@@ -210,6 +106,10 @@
 }
 
 .cases-list__item:first-child {
+	padding-top: 0;
+}
+
+.cases-list__item.is-banner + :nth-child(2) {
 	border-top: 1px solid var(--color-gray-blue)
 }
 
@@ -267,7 +167,7 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 
 	margin-top: var(--space-5x);
 	margin-bottom: var(--space-3x);
@@ -278,6 +178,7 @@
 }
 
 .cases__category-list {
+	margin-top: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -292,8 +193,9 @@
 
 
 /* Cases-page styles */
-.cases.is-cases-page .cases-banner {
-	padding-top: calc(var(--header-height) + var(--space-16x));
+.cases.is-cases-page,
+.cases-list__item.is-banner.is-cases-page {
+	padding-top: var(--header-height);
 }
 
 .cases.is-cases-page .cases-list {
@@ -306,4 +208,152 @@
 
 .cases.is-cases-page .pagination {
 	padding: var(--space-2x) 0 0 var(--space-8x);
+}
+
+
+/* ---------- Adaptation ---------- */
+@media only screen and (min-width: 1100px) {
+	.cases-list__item.is-banner {
+		display: flex;
+		gap: 0;
+		padding-bottom: var(--space-16x);
+		border: none;
+
+		transition: var(--transition) ease-out 50ms;
+	}
+	
+	.cases-list__item.is-banner:hover {
+		transform: scale(101%);
+	}
+
+	.cases-list__item.is-banner:active {
+		transform: scale(100.5%);
+		transition: var(--transition-fast) ease-out;
+	}
+
+	.cases-list__item.is-banner .cases-list__item__image-block  {
+		position: relative;
+		display: block;
+		width: var(--space-column-4);
+		aspect-ratio: 16/9;
+		overflow: hidden;
+		border-radius: var(--space) 0 0 var(--space);
+	}
+
+	.cases-list__item.is-banner .cases-list__item__image {
+		position: static;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		border-radius: 0;
+		border: none;
+	}
+
+	.cases-list__item.is-banner:hover .cases-list__item__image,
+	.cases-list__item.is-banner:active .cases-list__item__image {
+		transform: none;
+	}
+
+	.cases-list__item.is-banner .cases__btn-to-web div {
+		position: absolute;
+		left: var(--space-8x);
+		bottom: var(--space-4x);
+		z-index: 2;
+
+		padding: var(--space) var(--space-2x);
+		border-radius: var(--space);
+		background-color: var(--color-black);
+	}
+
+	.cases-list__item.is-banner .cases-list__item__descr-block {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		box-sizing: border-box;
+		width: calc(var(--space-column-2) + var(--space-column-gap));
+		padding: var(--space-4x);
+		margin: 0;
+	}
+
+	.cases-list__item.is-banner .cases-list__item__descr-block::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+
+		height: 100%;
+		width: calc(100% + var(--space-4x));
+		
+		clip-path: url("#rectangleCasesBanner");
+		background-color: var(--color-white);
+	}
+
+	.cases-list__item.is-banner .cases__heading {
+		color: var(--color-black);
+	}
+
+	.cases-list__item.is-banner .cases__descr {
+		margin-top: var(--space-3x);
+		color: var(--color-black);
+	}
+
+	.cases-list__item__descr-block .cases__category-list::after {
+		display: none;
+	}
+
+	.cases-list__item.is-banner .cases__category-list li {
+		color: var(--color-gray);
+	}
+}
+
+
+@media only screen and (max-width: 1100px) {
+	.cases-list .content-area-wrapper {
+		align-items: center;
+
+		max-width: var(--space-column-4);
+		margin: 0 auto;
+	}
+
+	.cases-list__item {
+		display: block;
+		padding: var(--space-6x) 0;
+	}
+
+	.cases-list__item__image-block {
+		width: 100%;
+	}
+
+	.cases-list__item__image-block::after {
+		clip-path: none;
+		left: var(--space-3x);
+		right: var(--space-3x);
+		width: calc(100% - var(--space-6x));
+		border-radius: var(--space) var(--space) 0 0;
+	}
+
+	.cases-list__item__image {
+		width: 100%;
+		left: 0;
+		top: var(--space-2x);
+		margin-right: 0;
+	}
+
+	.cases-list__item__image-block .cases__btn-to-web {
+		display: none;
+	}
+
+	.cases-list__item__descr-block .cases__descr {
+		margin-top: var(--space-3x);
+	 }
+
+	.cases-list__item__descr-block {
+		margin-top: var(--space-3x);
+		margin-bottom: 0;
+	}
+
+	.cases__category-list {
+		margin-top: var(--space-3x);
+	}
 }
