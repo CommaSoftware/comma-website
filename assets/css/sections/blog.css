@@ -118,3 +118,38 @@
 .blog .pagination .btn.is-current {
 	border-color: var(--color-violet-darker);
 }
+
+
+/* ---------- Adaptation ---------- */
+@media only screen and (max-width: 1100px) {
+	.blog-preview .content-area-wrapper {
+		max-width: var(--space-column-4);
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-16x);
+	}
+
+	.blog-preview__heading-block {
+		display: contents;
+	}
+
+	.blog-preview .content-area-wrapper .btn {
+		max-width: fit-content;
+		margin: 0 auto;
+
+		order: 1;
+
+		text-align: center;
+	}
+
+	.blog-preview__block {
+		flex-direction: column;
+		gap: var(--space-8x);
+		margin-top: -8px;
+	}
+
+	.blog-card {
+		max-width: none;
+		width: auto;
+	}
+}
