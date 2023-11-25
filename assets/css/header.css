@@ -147,7 +147,7 @@
 	}
 
 	.main-header__nav:not(.shown) .main-header__nav__container {
-		transform: translateY(-100vh);
+		transform: translateY(-120vh);
 		opacity: .5;
 	}
 
