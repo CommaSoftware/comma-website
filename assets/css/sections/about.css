@@ -17,7 +17,7 @@
 	margin: var(--space-16x) 0;
 
 	columns: 3;
-	column-gap: var(--space-4x);
+	gap: var(--space-4x);
 }
 
 .about__content__image-n-quote-block {
@@ -36,4 +36,46 @@
 	height: 100%;
 	object-fit: cover;
 	clip-path: url(#rectangleAboutCover);
+}
+
+
+/* ---------- Adaptation ---------- */
+@media only screen and (max-width: 1100px) {
+	.about__content__text-block {
+		columns: auto;
+		display: flex;
+		flex-direction: column;
+
+		max-width: var(--space-column-4);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.about__content__image-n-quote-block {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-8x);
+
+		max-width: var(--space-column-4);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.about__content__quote {
+		order: -1;
+	}
+}
+
+@media only screen and (max-width: 540px) {
+	.about {
+		margin-top: var(--space-16x);
+	}
+
+	.about__logo {
+		padding-bottom: 0;
+	}
+	
+	.about__logo img {
+		width: calc(var(--space-column)*1.5);
+	}
 }
