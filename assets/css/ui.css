@@ -71,6 +71,14 @@ a[name] {
 	cursor: zoom-in;
 }
 
+/* ---------- Adaptation ---------- */
+@media only screen and (max-width: 1100px) {
+	.scrolling-through {
+		transform: translateX(var(--scrolling-through-translate));
+		transition: var(--transition-fast);
+	}
+}
+
 /* ---------- Buttons ---------- */
 .btn {
 	display: inline-flex;

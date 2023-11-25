@@ -253,3 +253,37 @@ function closeCookieOverlay() {
 
 setTimeout(showCookieOverlay, 1000);
 //--------------- Cookie-confirm Overlay (end) ---------------//
+
+
+// //--------------- Scrolling through (start) ---------------//
+// const scrollingThroughBlocks = document.querySelectorAll(".scrolling-through");
+// for (let i = 0; i < scrollingThroughBlocks.length; i++) {
+// 	document.addEventListener("scroll", (e) => {
+// 		let blockRect = scrollingThroughBlocks[i].getBoundingClientRect();
+// 		let headerHeight = 69;
+// 		let deviationY = 0;
+// 		console.log(blockRect.top - headerHeight)
+// 		if(blockRect.top - headerHeight > 0 && document.documentElement.clientHeight - blockRect.bottom > 0) {
+// 			deviationY = -((document.documentElement.clientHeight - blockRect.bottom)/(document.documentElement.clientHeight - headerHeight))*100;
+// 		} else if (document.documentElement.clientHeight - blockRect.bottom > 0) {
+// 			deviationY = -100;
+// 		}
+
+// 		Object.assign(scrollingThroughBlocks[i], {
+// 			style: `--scrolling-through-translate: ${deviationY}%;`
+// 		})
+// 	})
+// }
+// //--------------- Scrolling through (end) ---------------//
+
+
+//--------------- Slider carousel (start) ---------------//
+// const clientsCarousel = {
+// 	block: document.querySelector(""),
+// 	items: document.querySelectorAll(""),
+
+// 	slide: function(direction) {
+
+// 	},
+// }
+//--------------- Slider carousel (start) ---------------//

@@ -9,7 +9,8 @@
 }
 
 .clients__block ul {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
 	gap: var(--space-4x);
 
 	margin-top: var(--space-8x);
@@ -20,7 +21,7 @@
 .clients__item {
 	display: block;
 	box-sizing: border-box;
-	width: var(--space-column);
+	width: 100%;
 	aspect-ratio: 1/1;
 	padding: var(--space-3x);
 	
@@ -38,4 +39,18 @@
 
 .clients__item:hover {
 	border: 1px solid var(--color-violet-bg-ease);
+}
+
+
+/* ---------- Adaptation ---------- */
+@media only screen and (max-width: 800px) {
+	.clients__block ul {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media only screen and (max-width: 540px) {
+	.clients__block ul {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
