@@ -12,6 +12,10 @@
 	gap: var(--space-4x);
 }
 
+.reviews__lights-block {
+	position: relative;
+}
+
 .reviews__quote {
 	border-top: 1px solid var(--color-violet-bg-darker)
 }
@@ -49,10 +53,74 @@
 	filter: blur(16px);
 }
 
-.reviews__light .btn {
+.reviews__btn-block {
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	display: flex;
+	width: 100%;
+	height: var(--space-64x);
+}
+
+.reviews__btn-block .btn {
 	display: block;
 	margin: auto;
 
 	color: var(--color-white);
 	border-color: var(--color-white);
+}
+
+
+/* ---------- Adaptation ---------- */
+@media only screen and (max-width: 1100px) {
+	.reviews__block {
+		max-width: var(--space-column-4);
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: nowrap;
+
+		overflow: hidden;
+	}
+
+	.reviews__quote {
+		min-width: calc(50% - var(--space-2x));
+	}
+
+	.reviews__lights-block {
+		grid-template-columns: repeat(2, 1fr);
+		max-width: var(--space-column-4);
+		margin: 0 auto;
+	}
+
+	.reviews__light {
+		width: 100%;
+	}
+
+	.reviews__light:nth-of-type(2) {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.reviews__quote {
+		min-width: 100%;
+	}
+
+	.clients__block ul {
+		margin-top: var(--space-16x);
+	}
+
+	.reviews__lights-block {
+		grid-template-columns: 1fr;
+	}
+
+	.reviews__light:nth-of-type(1) {
+		display: none;
+	}
+
+	.reviews__light,
+	.reviews__btn-block {
+		height: calc(var(--space-32x) + var(--space-16x));
+	}
 }

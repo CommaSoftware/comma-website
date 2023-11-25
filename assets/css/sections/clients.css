@@ -12,6 +12,7 @@
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
 	gap: var(--space-4x);
+	align-items: center;
 
 	margin-top: var(--space-8x);
 
@@ -44,6 +45,10 @@
 
 /* ---------- Adaptation ---------- */
 @media only screen and (max-width: 800px) {
+	.clients {
+		padding-bottom: 0;
+	}
+	
 	.clients__block ul {
 		grid-template-columns: repeat(4, 1fr);
 	}
