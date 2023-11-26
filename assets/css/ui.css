@@ -7,6 +7,10 @@ body {
 	min-height: 100vh;
 }
 
+section {
+	overflow: hidden;
+}
+
 a[name] {
 	position: relative;
 	top: calc(0px - var(--header-height) - var(--space-10x));
@@ -16,6 +20,7 @@ a[name] {
 	position: absolute;
 	z-index: -10;
 	opacity: 0;
+	left: 0;
 }
 
 .content-area-wrapper {
