@@ -259,6 +259,10 @@ a[name] {
 	gap: var(--space-2x);
 }
 
+.pagination .btn {
+	justify-content: center;
+}
+
 .pagination .btn.is-current {
 	color: var(--color-white);
 	background: var(--color-violet);
@@ -277,5 +281,11 @@ a[name] {
 		display: block;
 		margin-left: 0;
 		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 540px) {
+	.pagination {
+		justify-content: center;
 	}
 }

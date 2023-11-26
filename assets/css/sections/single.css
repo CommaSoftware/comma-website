@@ -142,3 +142,12 @@
 	font-weight: 400;
 	letter-spacing: -0.01em
 }
+
+
+/* ---------- Adaptation ---------- */
+@media only screen and (max-width: 800px) {
+	.is-service-heading .article__block {
+		padding: none;
+		border: none;
+	}
+}
