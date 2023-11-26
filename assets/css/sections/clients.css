@@ -44,18 +44,33 @@
 
 
 /* ---------- Adaptation ---------- */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1100px) {
 	.clients {
 		padding-bottom: 0;
 	}
+
+	.clients .content-area-wrapper {
+		max-width: var(--space-column-4);
+	}
 	
 	.clients__block ul {
-		grid-template-columns: repeat(4, 1fr);
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.clients__block ul li {
+		width: var(--space-column);
 	}
 }
 
 @media only screen and (max-width: 540px) {
 	.clients__block ul {
+		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.clients__block ul li {
+		width: auto;
 	}
 }

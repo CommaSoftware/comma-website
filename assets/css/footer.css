@@ -170,8 +170,8 @@
 	}
 
 	.main-footer__about {
-		align-items: start;
 		text-align: left;
+		order: -2;
 	}
 
 	.main-footer__links ul {
@@ -180,6 +180,7 @@
 
 	.main-footer__actions {
 		justify-content: start;
+		order: -1;
 	}
 
 	.main-footer__actions .btn {
@@ -194,6 +195,7 @@
 
 	.main-footer__contacts {
 		text-align: start;
+		order: 1;
 	}
 
 	.main-footer__socials ul {
