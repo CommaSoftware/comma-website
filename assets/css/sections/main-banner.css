@@ -62,6 +62,12 @@
 
 
 /* ---------- Adaptation ---------- */
+@media only screen and (max-width: 1100px) {
+	.main-banner__block {
+		max-width: var(--space-column-4);
+	}
+}
+
 @media only screen and (max-width: 540px) {
 	.main-banner__block h1 {
 		margin-top: 100px;
