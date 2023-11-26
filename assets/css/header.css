@@ -189,12 +189,12 @@
 	.main-header__nav__container p {
 		display: block;
 	}
+}
 
-	@supports (backdrop-filter: blur()) {
-		.main-header__nav__container {
-			backdrop-filter: blur(12px);
-			background-color: var(--color-black-85);
-		}
+@supports (backdrop-filter: blur()) {
+	.main-header__nav__container {
+		backdrop-filter: blur(12px);
+		background-color: var(--color-black-85);
 	}
 }
 
