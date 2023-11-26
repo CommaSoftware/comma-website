@@ -70,6 +70,7 @@
 	display: block;
 	width: 100%;
 	aspect-ratio: 16/9.5;
+	max-height: 350px;
 	margin: 0 auto;
 
 	object-fit: cover;
@@ -202,3 +203,9 @@
 		display: none;
 	}
 }
+/* 
+@media only screen and (max-widht: 650px) {
+	.main-header__nav__container img {
+		display: none;
+	}
+} */
