@@ -81,6 +81,10 @@
 		margin-left: 0;
 		text-align: center;
 	}
+
+	.faq .content-area-wrapper {
+		max-width: var(--space-column-4);
+	}
 }
 
 @media only screen and (max-width: 800px) {
@@ -101,5 +105,15 @@
 
 	.faq .text {
 		text-align: left;
+	}
+
+	.faq__item__question {
+		justify-content: space-between;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.faq__item__question::before {
+		order: 1;
 	}
 }
