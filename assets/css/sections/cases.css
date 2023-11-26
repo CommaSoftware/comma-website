@@ -1,6 +1,5 @@
 .cases {
 	background-color: var(--color-black-bg);
-	transform: translateZ(-1px);
 }
 
 .cases .heading {
@@ -267,6 +266,7 @@
 
 	.cases-list__item.is-banner .cases-list__item__descr-block {
 		position: relative;
+		z-index: 2;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -276,11 +276,17 @@
 		margin: 0;
 	}
 
+	.cases-list__item.is-banner .cases-list__item__descr-block .cases__heading,
+	.cases-list__item.is-banner .cases-list__item__descr-block .cases__descr,
+	.cases-list__item.is-banner .cases-list__item__descr-block .cases__category-list {
+		position: relative;
+		z-index: 1;
+	}
+
 	.cases-list__item.is-banner .cases-list__item__descr-block::after {
 		content: "";
 		position: absolute;
 		inset: 0;
-		z-index: -1;
 
 		height: 100%;
 		width: calc(100% + var(--space-4x));
