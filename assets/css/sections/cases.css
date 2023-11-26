@@ -362,4 +362,16 @@
 	.cases__category-list {
 		margin-top: var(--space-3x);
 	}
+
+	.cases.is-cases-page .cases-list {
+		padding-bottom: var(--space-16x);
+	}
+
+	.cases.is-cases-page .pagination {
+		padding-left: 0;
+	}
+
+	.cases.is-cases-page .cases-list .content-area-wrapper {
+		align-items: center;
+	}
 }

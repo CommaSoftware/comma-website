@@ -160,6 +160,14 @@
 		max-width: none;
 		width: auto;
 	}
+
+	.blog .pagination {
+		justify-content: center;
+	}
+
+	.blog {
+		padding-bottom: var(--space-16x);
+	 }
 }
 
 @media only screen and (max-width: 1100px) and (min-width: 540px) {
@@ -182,7 +190,7 @@
 	.blog__block {
 		grid-template-columns: 1fr;
 	}
-	
+
 	.blog-card {
 		max-width: none;
 	}

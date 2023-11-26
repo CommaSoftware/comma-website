@@ -77,3 +77,10 @@
 		max-width: var(--space-column-4);
 	}
 }
+
+
+@media only screen and (max-width: 540px) {
+	.page-404__bg-back-hole {
+		width: 100%;
+	}
+}
