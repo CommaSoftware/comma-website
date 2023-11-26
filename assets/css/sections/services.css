@@ -229,6 +229,11 @@
 
 /* ---------- Adaptation ---------- */
 @media only screen and (max-width: 1100px) {
+	.services__block.content-area-wrapper {
+		max-width: var(--space-column-4);
+	}
+
+
 	.services-category {
 		display: block;
 	}
