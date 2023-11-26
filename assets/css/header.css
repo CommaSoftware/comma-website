@@ -22,9 +22,18 @@
 	background-color: var(--color-black);
 }
 
+.main-header__nav__container {
+	background-color: var(--color-black);
+}
+
 @supports (backdrop-filter: blur()) {
 	.main-header__pannel {
 		backdrop-filter: blur(12px);
+		background-color: var(--color-black-85);
+	}
+
+	.main-header__nav__container {
+		backdrop-filter: blur(16px);
 		background-color: var(--color-black-85);
 	}
 }
@@ -168,7 +177,6 @@
 		padding: var(--space-3x);
 
 		border-radius: var(--space-3x);
-		background-color: var(--color-black);
 	}
 
 	.main-header__nav__container__hello {
@@ -188,13 +196,6 @@
 	.main-header__nav__container h3,
 	.main-header__nav__container p {
 		display: block;
-	}
-}
-
-@supports (backdrop-filter: blur()) {
-	.main-header__nav__container {
-		backdrop-filter: blur(12px);
-		background-color: var(--color-black-85);
 	}
 }
 
