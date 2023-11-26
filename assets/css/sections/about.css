@@ -78,4 +78,13 @@
 	.about__logo img {
 		width: calc(var(--space-column)*1.5);
 	}
+
+	.about__content__image {
+		width: calc(100% + 32px);
+		aspect-ratio: 16/9;
+		margin: 0 -16px;
+	}
+	.about__content__image img {
+		clip-path: none;
+	}
 }
