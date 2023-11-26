@@ -156,41 +156,46 @@
 }
 
 /* Hover effects */
-.command__card:not(.command__card.is-vacancy):hover {
+.command__card-3D-container:hover {
+	position: relative;
+	z-index: 8;
+}
+
+.command__card-3D-container:hover .command__card:not(.command__card.is-vacancy){
 	position: absolute;
 	z-index: 8;
 	transform: scale(105%) translate(calc(var(--deviationX-card)*-0.2), calc(var(--deviationY-card)*-0.2)) rotateX(var(--rotateX-card)) rotateY(var(--rotateY-card));
 	transition: var(--transition-fast) ease-out;
 }
 
-.command__card:not(.is-vacancy):hover::before,
-.command__card:not(.is-vacancy):active::before {
+.command__card-3D-container:hover .command__card:not(.is-vacancy)::before,
+.command__card-3D-container:active .command__card:not(.is-vacancy)::before {
 	opacity: 1;
 }
 
-.command__card:hover::after,
-.command__card:active::after {
+.command__card-3D-container:hover .command__card::after,
+.command__card-3D-container:hover .command__card::after {
 	opacity: 1;
 	transition: var(--transition-fast) ease-out;
 }
 
-.command__card:hover .command__card__img-block img,
-.command__card:active .command__card__img-block img {
+.command__card-3D-container:hover .command__card__img-block img,
+.command__card-3D-container:active .command__card__img-block img {
 	filter: none;
 }
 
-.command__card:hover .command__card__descr-block p, 
-.command__card:active .command__card__descr-block p {
+.command__card-3D-container:hover .command__card__descr-block p, 
+.command__card-3D-container:active .command__card__descr-block p {
 	opacity: 1;
 }
 
-.command__card:not(.command__card.is-vacancy):hover .command__card__descr-block h3,
-.command__card:not(.command__card.is-vacancy):active .command__card__descr-block h3 {
+.command__card-3D-container:hover .command__card:not(.command__card.is-vacancy) .command__card__descr-block h3,
+.command__card-3D-container:active .command__card:not(.command__card.is-vacancy) .command__card__descr-block h3 {
 	color: var(--color-white);
 }
 
-.command__card:hover .command__card__contact,
-.command__card:active .command__card__contact {
+.command__card-3D-container:hover .command__card__contact,
+.command__card-3D-container:active .command__card__contact {
 	opacity: .85;
 }
 
@@ -268,14 +273,43 @@
 
 @media only screen and (max-width: 1100px) {
 	.command__block {
+		position: relative;
 		display: flex;
 
-		width: var(--space-column-4);
+		max-width: var(--space-column-4);
 		margin-left: auto;
 		margin-right: auto;
 	}
 
 	.command__card-3D-container {
-		min-width: calc(50% - var(--space-4x));
+		min-width: calc(50% - var(--space-2x));
+	}
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 540px) {
+	.command__block::before,
+	.command__block::after {
+		content: "";
+		position: absolute;
+		top: calc(var(--space-4x)*-1);
+		z-index: 1;
+		width: 50%;
+		height: calc(100% + var(--space-8x));
+		background-color: var(--color-white);
+		opacity: .9;
+	}
+
+	.command__block::before {
+		left: -50%;
+	}
+
+	.command__block::after {
+		right: -50%;
+	}
+}
+
+@media only screen and (max-width: 540px) {
+	.command__card-3D-container {
+		min-width: calc(100% - var(--space-6x));
 	}
 }
