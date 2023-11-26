@@ -281,4 +281,8 @@
 	.services-category__heading::before {
 		border-radius: var(--space-2x);
 	}
+	
+	.services__block .text {
+		text-align: left;
+	}
 }

@@ -98,4 +98,8 @@
 	.faq__item__answer {
 		margin-left: 0;
 	}
+
+	.faq .text {
+		text-align: left;
+	}
 }
