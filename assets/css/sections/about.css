@@ -68,7 +68,7 @@
 
 @media only screen and (max-width: 540px) {
 	.about {
-		margin-top: var(--space-16x);
+		margin-top: var(--space-8x);
 	}
 
 	.about__logo {
