@@ -107,10 +107,6 @@
 		min-width: 100%;
 	}
 
-	.clients__block ul {
-		margin-top: var(--space-16x);
-	}
-
 	.reviews__lights-block {
 		grid-template-columns: 1fr;
 	}
@@ -124,3 +120,13 @@
 		height: calc(var(--space-32x) + var(--space-16x));
 	}
 }
+
+@media only screen and (max-width: 540px) {
+	.reviews__light, .reviews__btn-block {
+	  height: var(--space-32x);
+	}
+
+	.reviews__btn-block .btn {
+		margin: auto 0;
+	}
+ }

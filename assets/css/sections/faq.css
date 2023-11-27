@@ -111,6 +111,8 @@
 		justify-content: space-between;
 		padding-left: 0;
 		padding-right: 0;
+		font-size: var(--font-size-heading-small);
+		align-items: start;
 	}
 
 	.faq__item__question::before {

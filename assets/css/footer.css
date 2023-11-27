@@ -212,6 +212,10 @@
 }
 
 @media only screen and (max-width: 540px) {
+	.main-footer {
+		padding: var(--space-8x) 0 var(--space-4x) 0;
+	}
+
 	.main-footer__links ul {
 		display: flex;
 		flex-direction: column;

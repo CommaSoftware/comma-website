@@ -76,7 +76,8 @@
 	}
 	
 	.about__logo img {
-		width: calc(var(--space-column)*1.5);
+		width: calc(var(--space-column)*1.25);
+		margin: 0;
 	}
 
 	.about__content__image {
@@ -86,5 +87,9 @@
 	}
 	.about__content__image img {
 		clip-path: none;
+	}
+
+	.about__content__text-block {
+		margin: var(--space-8x) 0;
 	}
 }

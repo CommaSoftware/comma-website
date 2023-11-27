@@ -278,10 +278,18 @@
 		height: 3.6em;
 	}
 
+	.services__categories-block {
+		padding-top: var(--space-8x);
+	}
+
 	.services__categories-block::before, 
 	.services__categories-block::after {
 		display: none;
 	}
+
+	.services-category:nth-child(n+2) {
+		margin-top: var(--space-8x);
+	 }
 
 	.services-category__heading::before {
 		border-radius: var(--space-2x);
@@ -289,5 +297,11 @@
 	
 	.services__block .text {
 		text-align: left;
+	}
+}
+
+@media only screen and (max-width: 540px) {
+	.services__block {
+		margin-top: 0;
 	}
 }

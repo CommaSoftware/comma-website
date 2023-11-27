@@ -375,3 +375,31 @@
 		align-items: center;
 	}
 }
+
+@media only screen and (max-width: 540px) {
+	.cases .heading {
+		padding-top: var(--space-8x);
+		margin-bottom: var(--space-6x);
+	}
+
+	.cases__heading {
+		font-size: var(--font-size-heading-small);
+	}
+
+	.cases-list__item__descr-block .cases__descr {
+		font-size: var(--font-size-content);
+	}
+
+	.cases-list__item__descr-block .cases__category-list::after {
+		display: none;
+	}
+
+	.cases.is-cases-page .cases-list {
+		padding-bottom: var(--space-8x);
+	}
+
+	.cases.is-cases-page .cases-list .content-area-wrapper,
+	.cases-list .content-area-wrapper {
+		align-items: start;
+	}
+}

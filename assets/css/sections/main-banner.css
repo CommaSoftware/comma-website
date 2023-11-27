@@ -3,6 +3,7 @@
 	width: 100%;
 	background-image: url(../../images/main-banner.webp);
 	background-attachment: fixed;
+	background-size: cover;
 }
 
 .main-banner::before {

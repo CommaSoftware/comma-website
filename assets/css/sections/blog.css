@@ -187,11 +187,38 @@
 }
 
 @media only screen and (max-width: 540px) {
+	.blog-preview {
+		padding-top: var(--space-8x);
+	}
+
+	.blog-preview .content-area-wrapper {
+		gap: var(--space-8x);
+	}
+
+	.blog {
+		padding-top: calc(var(--header-height) + var(--space-16x));
+		padding-bottom: var(--space-16x);
+	}
+
+	.blog .pagination {
+		padding-top: var(--space-8x);
+		justify-content: start;
+	}
+	
 	.blog__block {
+		padding-top: var(--space-8x);
 		grid-template-columns: 1fr;
 	}
 
 	.blog-card {
 		max-width: none;
+	}
+
+	.blog-preview .content-area-wrapper .btn {
+		margin: 0;
+	}
+
+	.blog-preview .blog-card__heading {
+		font-size: var(--font-size-heading-small);
 	}
 }
