@@ -386,7 +386,7 @@
 	}
 
 	.cases-list__item__descr-block .cases__descr {
-		font-size: var(--font-size-content);
+		font-size: var(--font-size-content-small);
 	}
 
 	.cases-list__item__descr-block .cases__category-list::after {
