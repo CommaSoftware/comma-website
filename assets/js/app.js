@@ -264,3 +264,20 @@ setTimeout(showCookieOverlay, 1000);
 // 	},
 // }
 //--------------- Slider carousel (start) ---------------//
+
+//--------------- command slider1  ---------------//
+function WidthWindow(){
+	if(window.innerWidth < 1101) {
+		$('.command__block').slick({
+			dots: false,
+			infinite: false,
+			speed: 300,
+			slidesToShow: 2,
+		})
+	}	
+}
+
+window.addEventListener('resize', function() {
+	WidthWindow()
+})
+WidthWindow()

@@ -281,8 +281,19 @@
 		margin-right: auto;
 	}
 
-	.command__card-3D-container {
+	/* .command__card-3D-container {
 		min-width: calc(50% - var(--space-2x));
+	} */
+
+	/* slider style*/
+	.slick-track {
+		display: flex;
+	}
+	.slick-list {
+		overflow: hidden;
+	}
+	.command__block .slick-arrow {
+		display: none !important;
 	}
 }
 
