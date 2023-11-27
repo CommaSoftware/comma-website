@@ -378,7 +378,6 @@
 
 @media only screen and (max-width: 540px) {
 	.cases .heading {
-		padding-top: var(--space-8x);
 		margin-bottom: var(--space-6x);
 	}
 

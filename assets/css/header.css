@@ -32,10 +32,10 @@
 		background-color: var(--color-black-85);
 	}
 
-	.main-header__nav__container {
+	/* .main-header__nav__container {
 		backdrop-filter: blur(16px);
 		background-color: var(--color-black-85);
-	}
+	} */
 }
 
 .main-header__pannel .main-header__logo:active {

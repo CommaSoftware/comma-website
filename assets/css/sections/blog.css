@@ -187,10 +187,6 @@
 }
 
 @media only screen and (max-width: 540px) {
-	.blog-preview {
-		padding-top: var(--space-8x);
-	}
-
 	.blog-preview .content-area-wrapper {
 		gap: var(--space-8x);
 	}
