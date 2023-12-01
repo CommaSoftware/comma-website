@@ -282,7 +282,6 @@ function WidthWindow(){
 				},
 			  ]
 		})
-
 	}	
 }
 
