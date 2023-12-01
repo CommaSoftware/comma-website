@@ -317,14 +317,40 @@
 	.command__block::after {
 		right: -50%;
 	}
+	.command__card-3D-container {
+		margin-right: 10px;
+	}
+	.command__card-3D-container:last-child {
+		margin-right: 0;
+	}
+
+}
+@media only screen and (max-width: 610px) {
+	.command__card__descr-block h3 {
+		font-size: 20px;
+	}
+	.command__card__descr-block .command__card__career {
+		font-size: 13px;
+	}
+	.command__card-3D-container {
+		margin-right: 5px;
+	}
 }
 
 @media only screen and (max-width: 540px) {
 	.command {
 		padding-top: 0;
 	}
+	.command__block {
+		max-width: 90%;
+	}
 
-	.command__card-3D-container {
+	/* .command__card-3D-container {
 		min-width: calc(100% - var(--space-6x));
+	} */
+}
+@media only screen and (max-width: 540px) {
+	.command__block {
+		max-width: 100%;
 	}
 }

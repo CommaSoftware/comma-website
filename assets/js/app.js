@@ -273,7 +273,16 @@ function WidthWindow(){
 			infinite: false,
 			speed: 300,
 			slidesToShow: 2,
+			responsive: [
+				{
+				  breakpoint: 540,
+				  settings: {
+					slidesToShow: 1,
+				  }
+				},
+			  ]
 		})
+
 	}	
 }
 
