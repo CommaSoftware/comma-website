@@ -34,6 +34,48 @@
 // document.addEventListener("mouseover", customMouse.mouseShow);
 // ---------- Custom Mouse (end) ---------- //
 
+//--------------- command slider1(start)  ---------------//
+
+$slick = false;
+function withSlider(){    
+	if($(window).width() < 1101){
+		if(!$slick){
+			$(".command__block").slick({
+				dots: false,
+				infinite: false,
+				speed: 500,
+				slidesToShow: 2,
+				centerPadding: '60px',
+				centerMode: true,
+				responsive: [
+					{
+					breakpoint: 540,
+					settings: {
+						slidesToShow: 1,
+						centerPadding: '50px',
+					}
+					},
+				]
+			});
+			$slick = true;
+		}
+	} else if($(window).width() > 1101){
+		if($slick){
+			$('.command__block').slick('unslick');
+			$slick = false;
+		}
+	}
+};
+
+$(document).ready(function(){
+	withSlider();
+});
+$(window).on('resize', function(){
+	withSlider();
+});
+
+
+//--------------- command slider1(end)  ---------------//
 
 document.querySelector(".main-header__nav__btn").addEventListener("click", (e)=> {
 	e.currentTarget.closest(".main-header__nav").classList.toggle("shown");
@@ -265,27 +307,5 @@ setTimeout(showCookieOverlay, 1000);
 // }
 //--------------- Slider carousel (start) ---------------//
 
-//--------------- command slider1  ---------------//
-function WidthWindow(){
-	if(window.innerWidth < 1101) {
-		$('.command__block').slick({
-			dots: false,
-			infinite: false,
-			speed: 300,
-			slidesToShow: 2,
-			responsive: [
-				{
-				  breakpoint: 540,
-				  settings: {
-					slidesToShow: 1,
-				  }
-				},
-			  ]
-		})
-	}	
-}
 
-window.addEventListener('resize', function() {
-	WidthWindow()
-})
-WidthWindow()
+
