@@ -45,14 +45,14 @@ function withSlider(){
 				infinite: false,
 				speed: 500,
 				slidesToShow: 2,
-				centerPadding: '60px',
+				centerPadding: '40px',
 				centerMode: true,
 				responsive: [
 					{
 					breakpoint: 540,
 					settings: {
 						slidesToShow: 1,
-						centerPadding: '50px',
+						centerPadding: '15px',
 					}
 					},
 				]

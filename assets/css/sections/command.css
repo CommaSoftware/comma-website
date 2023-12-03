@@ -288,6 +288,8 @@
 	/* slider style*/
 	.slick-track {
 		display: flex;
+		position: relative;
+		left: calc(var(--space-column-2)*-1);
 	}
 	.slick-list {
 		overflow: hidden;
@@ -336,6 +338,11 @@
 		margin-right: 5px;
 	}
 }
+@media only screen and (max-width: 715px) {
+	.slick-track {
+		left: calc(var(--space-column-2)*-0.9);
+	}
+}
 
 @media only screen and (max-width: 540px) {
 	.command {
@@ -347,6 +354,14 @@
 	/* .command__card-3D-container {
 		min-width: calc(100% - var(--space-6x));
 	} */
+
+	.slick-list {
+		margin-left: -16px;
+		margin-right: -16px;
+	}
+	.slick-track {
+		left: inherit;
+	}
 }
 @media only screen and (max-width: 540px) {
 	.command__block {
