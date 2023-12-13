@@ -108,7 +108,6 @@
 	font-size: var(--font-size-content-small);
 	font-weight: 500;
 	letter-spacing: 0.14px;
-	text-transform: lowercase;
 
 	opacity: 0;
 	transition: var(--transition) ease-in-out;

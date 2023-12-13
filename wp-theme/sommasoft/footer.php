@@ -24,7 +24,7 @@
 			</div>
 			<div class="main-footer__contacts">
 				<p><i>Пишите нам по любым вопросам или просто познакомиться :)</i></p>
-				<a href="mailto:<?php echo get_theme_mod('contacts_email', 'example@site.com'); ?>" title="Отправить письмо" class="btn is-small is-transparent-bg"><?php echo get_theme_mod('contacts_email', 'example@site.com'); ?></a>
+				<address><a href="mailto:<?php echo get_theme_mod('contacts_email', 'example@site.com'); ?>" title="Отправить письмо" class="btn is-small is-transparent-bg"><?php echo get_theme_mod('contacts_email', 'example@site.com'); ?></a></address>
 			</div>
 			<div class="main-footer__copyright">
 				<span>© 2023 Comma Software</span>

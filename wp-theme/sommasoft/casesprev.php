@@ -43,7 +43,7 @@
 							<figcaption class="cases__btn-to-web">
 								<object>
 									<a href="<?php echo get_post_meta($post->ID, 'website_link', 1); ?>" target="blank">
-										<img class="favicon" src="http://favicon.yandex.net/favicon/<?php echo get_post_meta($post->ID, 'website_link', 1); ?>"  loading="lazy"/>
+										<img class="favicon" src="https://favicon.yandex.net/favicon/<?php echo get_post_meta($post->ID, 'website_link', 1); ?>"  loading="lazy"/>
 										<?php echo get_post_meta($post->ID, 'website_name', 1); ?>
 									</a>
 								</object>

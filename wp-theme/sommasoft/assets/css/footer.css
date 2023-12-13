@@ -75,6 +75,10 @@
 	letter-spacing: -0.14px;
 }
 
+.main-footer__contacts address {
+	font-style: normal;
+}
+
 .main-footer__contacts .btn {
 	padding-bottom: 0;
 }

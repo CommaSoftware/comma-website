@@ -197,7 +197,7 @@ function showCookieOverlay() {
 						<p class="cookie-overlay__text">Мы используем файлы cookie, <br>чтобы делать наш сайт лучше ;)</p>
 						<div class="btn cookie-overlay__btn is-bordered is-small">Хорошо</div>
 					</div>
-					<img src="assets/images/icons/cookie.svg">
+					<img src="/wp-content/themes/sommasoft/assets/images/cookie.webp">
 				</div>
 			</div>`
 		document.body.append(cookieOverlay);

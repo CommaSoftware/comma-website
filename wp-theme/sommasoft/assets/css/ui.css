@@ -23,8 +23,10 @@ a[name] {
 .svg {
 	position: absolute;
 	z-index: -10;
-	opacity: 0;
 	left: 0;
+
+	opacity: 0;
+	pointer-events: none;
 }
 
 .content-area-wrapper {

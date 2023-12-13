@@ -8,6 +8,7 @@
 
 	<title><?php wp_title('//', true, 'right');?> <?php bloginfo('name'); ?></title>
 
+	<!-- Meta for SEO -->
 	<?php if(is_front_page()) { ?>
 		<meta name="description" content="<?php echo get_bloginfo('description'); ?>">
 	<?php } elseif(is_single()) { ?>
@@ -15,6 +16,14 @@
 		<?php if(get_post_meta($post->ID, 'keyword', 1) != '') { ?>
 		<meta name="keywords" content="<?php echo get_post_meta($post->ID, 'keyword', 1); ?>" />
 		<?php } ?>
+	<?php } ?>
+
+	<!-- Meta for social network -->
+	<meta property="og:title" content="<?php wp_title('–', true, 'right');?> <?php bloginfo('name'); ?>" />
+	<?php if(is_single() && has_post_thumbnail( get_post())) { ?>
+		<meta property="og:image" content="<?php echo get_the_post_thumbnail_url( get_post(), "large" ) ?>" />
+	<?php } else { ?>
+		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/comma-banner.jpg" />
 	<?php } ?>
 
 	<?php wp_head(); ?>
