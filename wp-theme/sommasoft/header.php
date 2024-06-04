@@ -47,7 +47,7 @@
 							<li><a href="<?php echo get_home_url(); ?>#services" class="btn is-small is-transparent-bg text-animation-block">Услуги</a></li>
 							<li><a href="<?php echo get_home_url(); ?>/blog" class="btn is-small is-transparent-bg text-animation-block">Блог</a></li>
 						</ul>
-						<a href="<?php echo get_theme_mod('btn_start__href', ''); ?>" class="btn text-animation-block" target="blank">Начать проект</a>
+						<a href="<?php echo get_theme_mod('btn_start__href', ''); ?>" class="btn text-animation-block">Начать проект</a>
 				</div>
 			</nav>
 		</div>

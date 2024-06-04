@@ -6,5 +6,136 @@
  * Description: Для корректной работы темы необходимо создать страницы "Блог" (слаг: "blog") и "Кейсы" (слаг: "cases") и выбрать для них соответствующие шаблоны.
  * Tags:        black, violet, cyber, corporate website, web-studio
  * Text Domain: commasoft
- * Version:     1.0.0-3
+ * Version:     1.0.0-6
  */
+
+
+/* Стили формы ContactForm7 */
+
+.wpcf7-form input {
+	overflow: hidden;
+	box-sizing: border-box;
+	padding: var(--space-3x) var(--space-4x);
+	border-radius: var(--space-2x);
+	font-size: var(--font-size-content);
+
+	border: 1px solid var(--color-gray-ease);
+	color: var(--color-black);
+	background-color: var(--color-gray-ease);
+}
+
+.wpcf7-form textarea {
+	border: 1px solid var(--color-gray-ease);
+	color: var(--color-black);
+	background-color: var(--color-gray-ease);
+	padding: var(--space-3x) var(--space-4x);
+	border-radius: var(--space-2x);
+	font-size: var(--font-size-content);
+	line-height: 140%;
+	box-sizing: border-box;
+	width: 100%;
+	height: 6em;
+	resize: vertical;
+}
+
+@media only screen and (max-width: 720px) {
+	.wpcf7-form textarea {
+		height: 18em;
+	}
+}
+
+.wpcf7-form input:not([type="time"], [type="number"], [type="submit"], [type="checkbox"]) {
+	width: 100%;
+}
+
+.wpcf7-form input[type="submit"] {
+	height: auto;
+	border: none;
+	margin-top: var(--space-5x)
+}
+
+.wpcf7-form input[type="file"] {
+	border: 3px dotted var(--color-gray);
+ 	padding: var(--space-6x) var(--space-4x);
+}
+
+.wpcf7-form input::placeholder {
+	color: var(--elem-basic);
+	opacity: 0.5;
+	transition: 200ms;
+}
+
+.wpcf7-form input:focus-visible::placeholder {
+	opacity: 0.8;
+}
+
+.wpcf7-form input:not([type="submit"], [type="checkbox"], [type="file"]):focus,
+.wpcf7-form textarea:focus {
+	outline: none;
+	border-color: transparent;
+	box-shadow: inset 2px 2px 3px #520B7E10;
+}
+
+
+.wpcf7-form label {
+	display: block;
+	font-size: var(--font-size-content-small);
+	margin: 2px 0;
+	color: var(--cross-theme-elem-gray);
+}
+
+.wpcf7-form label span {
+	color: var(--color-red)
+}
+
+.wpcf7-form .gdpr-label .wpcf7-form-control .wpcf7-list-item label {
+	display: flex;
+	align-items: center;
+}
+
+.wpcf7-form .gdpr-label .wpcf7-list-item {
+	margin: 0;
+}
+
+input[type=checkbox] {
+	margin-right: 10px;
+}
+
+
+/* Статус заполнения: Ошибка */
+
+.wpcf7-form input[aria-invalid="true"] {
+	background: var(--color-red-bg);
+	border-color: var(--color-red-bg);
+}
+
+/* Статус заполнения: Предупреждение */
+
+.wpcf7 form.invalid .wpcf7-response-output, 
+.wpcf7 form.unaccepted .wpcf7-response-output, 
+.wpcf7 form.payment-required .wpcf7-response-output {
+	padding: var(--space-4x);
+	background: linear-gradient(to right, var(--color-violet-bg) 0%, var(--color-violet-bg-ease) 45%);
+	margin: var(--space-4x) 0;
+	border-radius: var(--space-2x);
+	border: none;
+	border-left: var(--space) solid var(--color-violet);
+}
+
+
+/* Статус заполнения: Подтверждено */
+
+.wpcf7-form.sent input:not([type="submit"], [type="checkbox"]),
+.wpcf7-form.sent textarea {
+	background: var(--color-aquamarine-bg);
+  	border-color: var(--color-aquamarine-bg);
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+	padding: var(--space-4x);
+	background: linear-gradient(to right, #9EFFD3 55%, var(--color-violet-bg) 100%);
+	margin: var(--space-4x) 0;
+	border-radius: var(--space-2x);
+	border: none;
+	border-left: var(--space) solid var(--color-aquamarine);
+}

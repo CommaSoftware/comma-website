@@ -121,6 +121,16 @@ a[name] {
 	letter-spacing: -0.01em;
 }
 
+.btn.is-black {
+	color: var(--color-white);
+	background-color: var(--color-black-bg);
+}
+
+.btn.is-black:hover,
+.btn.is-black:active {
+	background-color: var(--color-violet-darker);
+}
+
 .btn.is-transparent-bg {
 	color: var(--color-white);
 	background-color: transparent;
